@@ -1,12 +1,12 @@
 ## 💥 문제
 
 ```typescript
-type Response =
-  | { status: "success"; data: string }
-  | { status: "error"; error: string }
+type ApiResponse =
+  | { status: "success", data: string }
+  | { status: "error", error: string }
   | { status: "timeout" };
 
-function handleResponse(res: Response) {
+function handleResponse(res: ApiResponse) {
   switch (res.status) {
     case "success":
       console.log(res.data);
